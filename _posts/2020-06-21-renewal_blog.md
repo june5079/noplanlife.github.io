@@ -4,6 +4,7 @@ title:  "Blog renewal"
 date:   2020-06-20
 banner_image: renew.jpg
 tags: [essay]
+comments: true
 ---
 
 2014년부터 개인적으로 운영해왔던 워드프레스 블로그를 내려놓고 Github Pages로 이관하려고 합니다. 이렇게 쓰고 보니 기존 워드프레스 블로그를 운영한지도 벌써 6년이나 지났군요.
