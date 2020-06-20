@@ -37,7 +37,7 @@ navigation:
   url: /tags/
 
 # The shortname for your Disqus site to enable comments.
-# disqus: "june5079"
+disqus: "noplanlife"
 
 # Google Analytics id, e.g. "UA-NNNNNNNN-N"
 # google_analytics: ""
