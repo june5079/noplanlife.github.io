@@ -10,9 +10,6 @@
     <link rel="stylesheet" href="/css/main.css" />
     <link rel="canonical" href="http://localhost:4000/2020/06/20/renewal_blog/">
     <link rel="alternate" type="application/rss+xml" title="Noplanlife Feed" href="http://localhost:4000/feed.xml">
-    {% if page.banner_image %}
-    <meta property="og:image" content="{{ site.baseurl }}{{ "/images/posts/ | append: page.banner_image" }} />
-    {% endif %}
 </head>
 <body>
     <div class="site">
@@ -75,10 +72,13 @@
             <p class="site-description">Thoughts, reviews and hacking ideas.</p>
             
 
+            
+            <meta property="og:image" content="/images/posts/" />
+            
+
         </div><!-- .site-header-inside -->
     </div><!-- .inner -->
 </header><!-- .site-header -->
-
         <div class="site-content outer">
             <div class="inner">
                 <main class="site-main">
@@ -91,6 +91,7 @@
                     <img src="/images/posts/renew.jpg"
                         alt="Blog renewal">
                 </div>
+
                 
                 <h1 class="post-title outer">Blog renewal</h1>
             </div>
