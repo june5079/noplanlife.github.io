@@ -10,7 +10,6 @@ layout: default
                 <a href="{{site.baseurl}}{{post.url}}" class="post-thumbnail"><img
                         src="{{ "/images/posts/" | append: post.banner_image | prepend: site.baseurl }}"
                         alt="{% if post.banner_image_alt %}{{ post.banner_image_alt }}{% else %}{{ post.title }} {% endif %}"></a>
-                <meta property="og:image" content="{{ "/images/posts/" | append: post.banner_image | prepend: site.baseurl }}" />
                 {% endif %}
                 <h2 class="post-title outer"><a href="{{ site.baseurl }}{{ post.url }}" rel="bookmark">{{post.title}}</a></h2>
             </div>

@@ -13,9 +13,12 @@
             {% endif %}
 
             {% if page.banner_image %}
-            <meta property="og:image" content="{{ "/images/posts/" | append: page.banner_image | prepend: site.baseurl }}" />
+            <meta property="og:image" content="{{ site.baseurl }}{{ "/images/posts/ | append: page.banner_image" }} />
             {% endif %}
 
         </div><!-- .site-header-inside -->
     </div><!-- .inner -->
 </header><!-- .site-header -->
+
+
+"{{ site.url }}/{{ page.header-img }}"
