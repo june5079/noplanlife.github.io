@@ -12,6 +12,10 @@
             <p class="site-description">{{site.tagline}}</p>
             {% endif %}
 
+            {% if page.banner_image %}
+            <meta property="og:image" content="{{ site.url }}/{{ page.banner_image }}" />
+            {% endif %}
+
         </div><!-- .site-header-inside -->
     </div><!-- .inner -->
 </header><!-- .site-header -->
