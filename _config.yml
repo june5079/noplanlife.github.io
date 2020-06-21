@@ -72,7 +72,9 @@ linkedin_url: "https://www.linkedin.com/june5079"
 # http://jekyllrb.com/docs/pagination/
 paginate: 5
 paginate_path: '/blog/page:num/'
-plugins: [jekyll-paginate]
+plugins:
+  - jekyll-paginate
+  - jekyll-seo-tag
 
 permalink: pretty
 markdown: kramdown
