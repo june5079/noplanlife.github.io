@@ -75,6 +75,7 @@ paginate_path: '/blog/page:num/'
 plugins:
   - jekyll-paginate
   - jekyll-seo-tag
+  - jekyll-sitemap
 
 permalink: pretty
 markdown: kramdown
