@@ -24,7 +24,7 @@ comments: true
 
 ---
 ### 코드에서 빌드까지
-<img width="971" alt="스크린샷 2024-03-28 오전 1 05 10" src="https://media.oss.navercorp.com/user/17706/files/62bdb7ea-7322-44f0-9cdc-c84638dab782">
+<img src="/images/posts/cloud_native_sec/page_02.png">
 
 - Yahoo 내부에서는 다양한 요구 사항과 필요를 가진 다양한 팀이 있으며, 각 팀은 소프트웨어를 배포하기 위한 자신들만의 경로를 가질 수 있음
 - 위 다이어그램은 Yahoo에서 사용 중인 주요 도구들, 소스 코드 관리 도구부터 빌드 시스템, 아티팩트 저장소, 그리고 마지막으로 배포 환경까지를 표시
@@ -33,13 +33,13 @@ comments: true
 
 ---
 ### 여행을 시작하며
-<img width="970" alt="스크린샷 2024-03-28 오전 1 20 01" src="https://media.oss.navercorp.com/user/17706/files/5769ce5b-d5d6-42c0-9067-d061c9842823">
+<img src="/images/posts/cloud_native_sec/page_03.png">
 
 - 소프트웨어의 보안은 많은 측면을 고려해야 하며 단 하나의 경로만 있더라도, 여러 보안 통제 및 모범 사례를 따라야 함.
 - 다행히도, 우리는 처음부터 시작할 필요가 없음. 왜냐하면 이미 기본적인 정적 코드 스캐닝, 레포 브랜치 생산과 같은 보안 컨트롤을 갖추고 있기 때문
 - 기존에 있던 보안 통제 방법과 오픈 소스 표준을 평가한 후, 우리는 세 가지 주요 격차를 깨달았음
 
-<img width="974" alt="스크린샷 2024-03-28 오전 1 21 53" src="https://media.oss.navercorp.com/user/17706/files/2fb2b651-f3df-4da5-ba99-12295ff31b26">
+<img src="/images/posts/cloud_native_sec/page_04.png">
 
 - 첫째, 정적 코드 스캔이 있다 하더라도 취약점이나 오픈 소스 종속성을 감지할 수 없으므로 이 격차를 해결하기 위해 SCA를 도입하기로 결정
 - 둘째, 코드가 리포지토리에서 릴리스된 후 소프트웨어를 확인하고 배포를 차단할 수 없으므로, SDLC에 두 개의 체크포인트(빌드 및 배포 단계)를 추가하기로 결정. 
@@ -47,7 +47,7 @@ comments: true
 ---
 ### SCA 도구
 
-<img width="975" alt="스크린샷 2024-03-28 오전 1 47 57" src="https://media.oss.navercorp.com/user/17706/files/40ea855a-dd65-435f-a6f3-d824a1206165">
+<img src="/images/posts/cloud_native_sec/page_05.png">
 
 - 기존의 코드 스캐닝은 코드의흐름과 논리를 살펴보고 취약점을 판단
 - 하지만 잠재적인 취약점이 있는지, 오픈 소스 종속성이 어떻게 이루어지는지는 살펴보지 않음
@@ -58,7 +58,7 @@ comments: true
 
 ---
 ### 빌드 타임 취약점 분석 (이미지 스캔)
-<img width="971" alt="스크린샷 2024-03-28 오전 1 54 38" src="https://media.oss.navercorp.com/user/17706/files/8e69b5e6-ad9f-4e9c-ade9-b3474c136c46">
+<img src="/images/posts/cloud_native_sec/page_06.png">
 
 - 그러나 Kubernetes 클러스터에 배포될 이미지에는 항상 애플리케이션 바이너리 이외의 구성 요소(예: 기본 운영 체제 및 추가할 수 있는 다른 패키지)가 포함됨
 - 따라서 전체 이미지를 스캔할 수 있는 빌드 타임 취약점 평가가 매우 중요
@@ -70,7 +70,7 @@ comments: true
 ---
 ### 프로덕션 배포 단계에서의 검증
 
-<img width="971" alt="스크린샷 2024-03-28 오전 2 03 32" src="https://media.oss.navercorp.com/user/17706/files/f3edf211-2478-4b7d-a065-2c4f64b077d1">
+<img src="/images/posts/cloud_native_sec/page_07.png">
 
 - 마지막 배포 단계에서 배포될 이미지에 대한 보안 검증을 수행
 - 이미지가 서명되지 않았거나 신뢰할 수 없는 레지스트리의 이미지이거나 해결되지 않은 취약점이 있는 경우 배포를 차단하거나 최소한 엔지니어에게 해당 위반 사항을 알림
@@ -80,7 +80,7 @@ comments: true
 
 ---
 ### 이미지 출처 보장
-<img width="1404" alt="스크린샷 2024-03-28 오전 10 51 58" src="https://media.oss.navercorp.com/user/17706/files/a8828d8e-9e7d-46e8-a0c7-3421b42a8a0b">
+<img src="/images/posts/cloud_native_sec/page_08.png">
 
 - Provenance는 이미지의 출처를 알려주는 다양한 기록의 집합
 - 누가 코드를 커밋했는지, 이 이미지의 원래 출처인 리포지토리 및 브랜치, 빌드 정보 등이 포함될 수 있음
@@ -95,19 +95,19 @@ comments: true
 - 두 번째 이미지는 완전한 출처 정보를 가지고 있지만 약간의 문제가 있는 케이스
 - 세 번째 이미지는 완전한 출처 정보를 가지고 있는 케이스
 
-<img width="1407" alt="스크린샷 2024-03-28 오전 11 08 25" src="https://media.oss.navercorp.com/user/17706/files/58d904ea-e259-40ce-82b9-f4939a233c68">
+<img src="/images/posts/cloud_native_sec/page_09.png">
 
 - 첫 번째 이미지: 이 이미지는 공격자가 예상되는 CI/CD 파이프라인을 통과하지 않고 직접 레지스트리에 업로드
 - 이 경우 webhook이 데이터베이스에서 어떤 출처 정보도 가져올 수 없기 때문에 배포를 거부
 - 이 케이스는 리소스 저장소 또는 빌드 작업 정보가 없음을 확인할 수 있음
 
-<img width="1405" alt="스크린샷 2024-03-28 오전 11 14 56" src="https://media.oss.navercorp.com/user/17706/files/40732929-9e24-4ad3-913d-9671ca5c885c">
+<img src="/images/posts/cloud_native_sec/page_10.png">
 
 - 두 번째 이미지: 이 이미지는 악의적인 변경이 포함된 포크된 저장소에서 빌드되고 업로드됨
 - 이 경우 이미지에 출처 정보가 있지만 이미지가 포크된 저장소에서 왔다는 정보가 표시
 - 따라서 오류 메시지에서 볼 수 있듯이 "소스 리포지토리 불일치"라고 표시되며 webhook이 배포를 거부
 
-<img width="1403" alt="스크린샷 2024-03-28 오전 11 20 14" src="https://media.oss.navercorp.com/user/17706/files/d618634d-ad22-4c15-9d88-23afa37f805e">
+<img src="/images/posts/cloud_native_sec/page_11.png">
 
 - 세 번째 이미지: 마지막으로 이 이미지는 신뢰할 수 있는 레지스트리에 있는 신뢰할 수 있는 소스 코드 및 파이프라인에서 빌드됨
 - 이 경우 이미지에는 완전한 출처 정보가 있으며, 출처 정보에 문제가 없으므로 webhook이 배포를 허용
@@ -115,7 +115,7 @@ comments: true
 ---
 ### 이미지 서명 검증 + 데모
 
-<img width="1400" alt="스크린샷 2024-03-28 오전 11 22 13" src="https://media.oss.navercorp.com/user/17706/files/abcc7157-a1b5-4456-870d-c2b3dc7439d8">
+<img src="/images/posts/cloud_native_sec/page_12.png">
 
 - 두 번째 검사는 이미지 서명
 - 빌드 시스템에서 이미지에 서명이 되었는지 확인하며 이는 이미지의 무결성과 배포자를 검증하는데 도움이 됨
@@ -123,7 +123,7 @@ comments: true
 - 서명 메커니즘은 오랫동안 존재해 왔지만 배포 전에 서명을 확인하는 시행(enforcement) 과정이 없었음
 - 따라서 이 검사를 강제함으로써 해당 부분의 보안을 강화할 수 있음
 
-<img width="1402" alt="스크린샷 2024-03-28 오전 11 33 10" src="https://media.oss.navercorp.com/user/17706/files/c3463e77-a67c-4fa8-a5a7-29c1527924a8">
+<img src="/images/posts/cloud_native_sec/page_13.png">
 
 - 서명 검사는 webhook에 직접 통합되어 있음. 
 - 첫 번째 이미지는 빌드 파이프라인에서 서명되지 않았기 때문에 webhook은 이 이미지에 연결된 서명을 서명 데이터베이스에서 찾을 수 없음. 따라서 배포를 거부
@@ -132,16 +132,16 @@ comments: true
 ---
 ### 이미지 신선도(?) 체크
 
-<img width="1401" alt="스크린샷 2024-03-28 오전 11 39 56" src="https://media.oss.navercorp.com/user/17706/files/c33ee608-3afc-4e56-9080-b77c58f7fda7">
+<img src="/images/posts/cloud_native_sec/page_14.png">
 
 - 이 검사의 주요 목적은 사람들이 이미지를 정기적으로 업데이트하도록 장려하는 데 있음
 - 오래된 이미지는 일반적으로 더 많은 취약점을 가지고 있고, 오랫동안 이미지를 업데이트하지 않으면 보안 수정을 해야 할 시점에 이르러 패치가 너무 구식이거나 변경에 따른 리스크가 높아질 수 있기 때문
 - 이미지를 정기적으로 업데이트하면 빌드 파이프라인도 실행되므로 빌드 파이프라인의 문제를 제때 발견할 수 있음
 - "이미지 최신성" 검사를 위해서는 KubeArmor와 KubeArmor 정책을 활용
 
-<img width="1398" alt="스크린샷 2024-03-28 오전 11 41 36" src="https://media.oss.navercorp.com/user/17706/files/4dcc1618-51b0-4440-9e7f-695d4ee4a56c">
+<img src="/images/posts/cloud_native_sec/page_15.png">
 
-<img width="1401" alt="스크린샷 2024-03-28 오전 11 42 20" src="https://media.oss.navercorp.com/user/17706/files/bcc6e46e-d072-46a2-b522-2a92608ed03f">
+<img src="/images/posts/cloud_native_sec/page_16.png">
 
 - 이 검사를 위한 KubeArmor 정책은 6개월 이상 전에 빌드된 이미지를 차단
 - 이 정책은 KubeArmor 공식 웹사이트에서도 찾을 수 있음
@@ -151,7 +151,7 @@ comments: true
 ---
 ### 추가적인 배포단계의 검증 수단들
 
-<img width="1396" alt="스크린샷 2024-03-28 오전 11 51 26" src="https://media.oss.navercorp.com/user/17706/files/dc2af0f9-f032-4cdb-9e9b-378563f81e5d">
+<img src="/images/posts/cloud_native_sec/page_17.png">
 
 - 배포 또는 빌드 단계에서 검사는 결코 완벽한 방식은 아님
 - 필요한 데이터를 기반으로 거의 모든 정책을 평가하도록 선택할 수 있음
@@ -161,7 +161,7 @@ comments: true
 --- 
 ### 야후의 여정
 
-<img width="1395" alt="스크린샷 2024-03-28 오후 1 13 52" src="https://media.oss.navercorp.com/user/17706/files/463a255e-5ce2-446e-b21b-db8535b45c64">
+<img src="/images/posts/cloud_native_sec/page_18.png">
 
 - 지금까지 사용해 온 도구와 현재에 도달하기 위한 과정을 간략하게 요약하고자 함
 - 2020년 중반 이 여정을 시작했을 때, 사용 가능한 오픈소스 도구와 솔루션이 많지 않았음
@@ -176,7 +176,7 @@ comments: true
 --- 
 ### Lessons Learned
 
-<img width="1399" alt="스크린샷 2024-03-28 오후 1 20 56" src="https://media.oss.navercorp.com/user/17706/files/8920ff11-1b7e-4552-80fa-e91bbdcb53ec">
+<img src="/images/posts/cloud_native_sec/page_19.png">
 
 - 야후의 다양한 팀이 서로 다른 프로젝트와 도구로 작업하는 하이브리드 환경을 고려할 때, 우리는 여정에서 몇 가지 흥미로운 도전과제와 배움을 얻었음
 - 기존 개발자 워크플로를 자동으로 향상시키기
