@@ -1,8 +1,8 @@
 ---
 layout: post
-title:  "2020년 쓸어담기"
+title:  "[번역] How to Secure Your Supply Chain at Scale"
 date:   2024-03-29
-banner_image: done.jpg
+banner_image: cloud_native_sec_title.png
 tags: [security]
 comments: true
 ---
