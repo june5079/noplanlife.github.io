@@ -11,6 +11,8 @@ comments: true
 - 원본 영상 주소 : [How to Secure Your Supply Chain at Scale - Hemil Kadakia & Yonghe Zhao, Yahoo](https://youtu.be/6Zz798IW8Gs?si=hnBGH5qQ7ZjzlSez)
 - 발표 자료 : [HowToSecureSupplyChain_2023.pdf](https://oss.navercorp.com/ContainerSecurity-TF/Issues/files/497182/HowToSecureSupplyChain_2023.pdf)
 
+<!--more-->
+
 ---
 
 ### 야후의 클라우드 네이티브 운영 환경
